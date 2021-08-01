@@ -25,6 +25,12 @@ Compared to the original work,
 * Drop some deprecated sass usages.
 * Drop `javascript:;` deprecated by `React`.
 
+Additional features:
+
+* Replace the [font-awesome 4](https://fontawesome.com/v4.7/) fonts with [Iconify](https://iconify.design/), and support more icons.
+* Add a [`gatsby-plugin-smoothscroll`](https://www.gatsbyjs.com/plugins/gatsby-plugin-smoothscroll/) for supporting better smooth components.
+* Add `label` and `scrollbar` styles from [`semantic-ui`](https://semantic-ui.com/).
+
 ## CSS Grid
 
 The grid on this site was replaced with a custom version, built using CSS Grid. It's a very simple 12 column grid that is disabled on mobile. To start using the grid, wrap the desired items with `grid-wrapper`. Items inside the `grid-wrapper` use the class `col-` followed by a number, which should add up to 12.
