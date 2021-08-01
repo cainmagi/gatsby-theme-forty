@@ -1,4 +1,10 @@
-import React from 'react'
+import React from 'react';
+
+import CircleIcon from '../utils/CircleIcon';
+import fasEnvelopeIcon from '@iconify-icons/fa-solid/envelope';
+import fasPhoneAlt from '@iconify-icons/fa-solid/phone-alt';
+import fasHomeIcon from '@iconify-icons/fa-solid/home';
+
 
 const Contact = (props) => (
     <section id="contact">
@@ -26,21 +32,21 @@ const Contact = (props) => (
             <section className="split">
                 <section>
                     <div className="contact-method">
-                        <span className="icon alt fa-envelope"></span>
+                        <CircleIcon icon={fasEnvelopeIcon}/>
                         <h3>Email</h3>
                         <a href="#">information@untitled.tld</a>
                     </div>
                 </section>
                 <section>
                     <div className="contact-method">
-                        <span className="icon alt fa-phone"></span>
+                        <CircleIcon icon={fasPhoneAlt}/>
                         <h3>Phone</h3>
                         <span>(000) 000-0000 x12387</span>
                     </div>
                 </section>
                 <section>
                     <div className="contact-method">
-                        <span className="icon alt fa-home"></span>
+                        <CircleIcon icon={fasHomeIcon}/>
                         <h3>Address</h3>
                         <span>1234 Somewhere Road #5432<br />
                         Nashville, TN 00000<br />
@@ -52,4 +58,5 @@ const Contact = (props) => (
     </section>
 )
 
-export default Contact
+
+export default Contact;

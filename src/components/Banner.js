@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Banner = props => (
   <section id="banner" className="major">
@@ -14,7 +15,7 @@ const Banner = props => (
         </p>
         <ul className="actions">
           <li>
-            <a href="#one" name="Get Started" className="button next scrolly">
+            <a onClick={() => scrollTo('#one')} name="Get Started" className='button next scrolly'>
               Get Started
             </a>
           </li>

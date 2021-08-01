@@ -101,7 +101,6 @@
 	}
 
 	.select-wrapper {
-		@include icon;
 		display: block;
 		position: relative;
 
@@ -139,7 +138,7 @@
 	}
 
 	input[type="checkbox"],
-	input[type="radio"], {
+	input[type="radio"] {
 		@include vendor('appearance', 'none');
 		display: block;
 		float: left;
@@ -149,7 +148,6 @@
 		z-index: -1;
 
 		& + label {
-			@include icon;
 			color: _palette(fg);
 			cursor: pointer;
 			display: inline-block;

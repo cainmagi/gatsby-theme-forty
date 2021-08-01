@@ -4,6 +4,16 @@
   "version": "1.0.4",
   "author": "Hunter Chang",
   "dependencies": {
+    "@iconify-icons/codicon": "^1.1.18",
+    "@iconify-icons/fa-brands": "^1.1.0",
+    "@iconify-icons/fa-regular": "^1.1.0",
+    "@iconify-icons/fa-solid": "^1.1.1",
+    "@iconify-icons/mdi": "^1.1.17",
+    "@iconify-icons/octicon": "^1.1.9",
+    "@iconify/react": "^1.1.4",
+    "@mdx-js/mdx": "^1.6.22",
+    "@mdx-js/react": "^1.6.22",
+    "clsx": "^1.1.1",
     "gatsby-plugin-manifest": "^3.10.0",
     "gatsby-plugin-mdx": "^2.10.1",
     "gatsby-plugin-offline": "^4.10.0",
@@ -11,11 +21,10 @@
     "gatsby-plugin-react-helmet": "^4.10.0",
     "gatsby-plugin-sass": "^4.10.0",
     "gatsby-plugin-sitemap": "^4.6.0",
+    "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^3.10.0",
     "react-helmet": "^6.1.0",
-    "sass": "^1.37.0",
-    "@mdx-js/mdx": "^1.6.22",
-    "@mdx-js/react": "^1.6.22"
+    "sass": "^1.37.0"
   },
   "keywords": [
     "gatsby",
@@ -30,8 +39,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^2.3.2",
     "gatsby": "^3.10.2",
+    "prettier": "^2.3.2",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },

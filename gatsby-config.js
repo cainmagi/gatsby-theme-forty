@@ -7,6 +7,7 @@ module.exports = {
     description: 'A Gatsby.js Theme based on Forty by HTML5 UP',
   },
   plugins: [
+    `gatsby-plugin-smoothscroll`,
     'gatsby-plugin-react-helmet',
     {
       resolve: `gatsby-plugin-manifest`,
