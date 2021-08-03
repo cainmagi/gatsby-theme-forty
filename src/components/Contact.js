@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import CircleIcon from '../utils/CircleIcon'
-import fasEnvelopeIcon from '@iconify-icons/fa-solid/envelope'
-import fasPhoneAlt from '@iconify-icons/fa-solid/phone-alt'
-import fasHomeIcon from '@iconify-icons/fa-solid/home'
+import CircleIcon from '../utils/CircleIcon';
+import fasEnvelopeIcon from '@iconify-icons/fa-solid/envelope';
+import fasPhoneAlt from '@iconify-icons/fa-solid/phone-alt';
+import fasHomeIcon from '@iconify-icons/fa-solid/home';
 
 const Contact = (props) => (
   <section id="contact">
@@ -63,6 +63,6 @@ const Contact = (props) => (
       </section>
     </div>
   </section>
-)
+);
 
-export default Contact
+export default Contact;

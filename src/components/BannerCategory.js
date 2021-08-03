@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 function BannerCategory(props) {
-  const title = props.title !== undefined ? props.title : 'Landing'
+  const title = props.title !== undefined ? props.title : 'Landing';
   const descr =
     props.children !== undefined ? (
       props.children
@@ -11,7 +11,7 @@ function BannerCategory(props) {
         <br />
         sed veroeros. tempus adipiscing nulla.
       </p>
-    )
+    );
 
   return (
     <section id="banner" className="style2">
@@ -22,7 +22,7 @@ function BannerCategory(props) {
         <div className="content">{descr}</div>
       </div>
     </section>
-  )
+  );
 }
 
-export default BannerCategory
+export default BannerCategory;

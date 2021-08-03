@@ -1,56 +1,56 @@
-import React, { useState, useEffect, useReducer } from 'react'
-import clsx from 'clsx'
-import PropTypes from 'prop-types'
-import { Link } from 'gatsby'
+import React, { useState, useEffect, useReducer } from 'react';
+import clsx from 'clsx';
+import PropTypes from 'prop-types';
+import { Link } from 'gatsby';
 
-import * as styles from './Header.module.scss'
+import * as styles from './Header.module.scss';
 
-const HeaderInitialState = { scrollPos: -Infinity, isShown: true }
+const HeaderInitialState = { scrollPos: -Infinity, isShown: true };
 
 function reducer(state, action) {
   switch (action.type) {
     case 'update':
-      const new_scroll_pos = document.body.getBoundingClientRect().top
+      const new_scroll_pos = document.body.getBoundingClientRect().top;
       return {
         isShown: new_scroll_pos > state.scrollPos,
         scrollPos: new_scroll_pos,
-      }
+      };
     case 'init':
       return {
         isShown: true,
         scrollPos: -Infinity,
-      }
+      };
     default:
-      throw new Error()
+      throw new Error();
   }
 }
 
 function Header(props) {
-  const [state, dispatch] = useReducer(reducer, HeaderInitialState)
-  const [isCreated, setIsCreated] = useState(false)
+  const [state, dispatch] = useReducer(reducer, HeaderInitialState);
+  const [isCreated, setIsCreated] = useState(false);
 
   useEffect(() => {
     function handleScroll() {
-      dispatch({ type: 'update' })
+      dispatch({ type: 'update' });
     }
     // Equivalent to componentDidMount
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll);
 
     // Equivalent to componentWillUnmount
     return function cleanup() {
-      window.removeEventListener('scroll', handleScroll)
-    }
-  }, [isCreated])
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isCreated]);
 
   // Used for skipping componentDidUpdate
   useEffect(() => {
-    dispatch({ type: 'init' })
-    setIsCreated(true)
+    dispatch({ type: 'init' });
+    setIsCreated(true);
 
     return () => {
-      setIsCreated(false)
-    }
-  }, [])
+      setIsCreated(false);
+    };
+  }, []);
 
   return (
     <header
@@ -69,17 +69,17 @@ function Header(props) {
         </a>
       </nav>
     </header>
-  )
+  );
 }
 
 Header.propTypes = {
   isAlt: PropTypes.bool,
   onToggleMenu: PropTypes.func,
-}
+};
 
 Header.defaultProps = {
   isAlt: false,
   onToggleMenu: [],
-}
+};
 
-export default Header
+export default Header;

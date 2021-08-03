@@ -1,11 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-import CircleIcon from '../utils/CircleIcon'
-import fabTwitterIcon from '@iconify-icons/fa-brands/twitter'
-import fabFacebookF from '@iconify-icons/fa-brands/facebook-f'
-import fabInstagramIcon from '@iconify-icons/fa-brands/instagram'
-import fabGithubIcon from '@iconify-icons/fa-brands/github'
-import fabLinkedinIn from '@iconify-icons/fa-brands/linkedin-in'
+import CircleIcon from '../utils/CircleIcon';
+import fabTwitterIcon from '@iconify-icons/fa-brands/twitter';
+import fabFacebookF from '@iconify-icons/fa-brands/facebook-f';
+import fabInstagramIcon from '@iconify-icons/fa-brands/instagram';
+import fabGithubIcon from '@iconify-icons/fa-brands/github';
+import fabLinkedinIn from '@iconify-icons/fa-brands/linkedin-in';
 
 const Footer = (props) => (
   <footer id="footer">
@@ -35,6 +35,6 @@ const Footer = (props) => (
       </ul>
     </div>
   </footer>
-)
+);
 
-export default Footer
+export default Footer;

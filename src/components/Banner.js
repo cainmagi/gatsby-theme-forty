@@ -1,5 +1,5 @@
-import React from 'react'
-import scrollTo from 'gatsby-plugin-smoothscroll'
+import React from 'react';
+import scrollTo from 'gatsby-plugin-smoothscroll';
 
 const Banner = (props) => (
   <section id="banner" className="major">
@@ -27,6 +27,6 @@ const Banner = (props) => (
       </div>
     </div>
   </section>
-)
+);
 
-export default Banner
+export default Banner;

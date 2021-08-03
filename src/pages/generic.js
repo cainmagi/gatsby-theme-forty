@@ -1,8 +1,8 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Layout from '../components/layout'
+import React from 'react';
+import Helmet from 'react-helmet';
+import Layout from '../components/layout';
 
-import pic11 from '../assets/images/pic11.jpg'
+import pic11 from '../assets/images/pic11.jpg';
 
 const Generic = (props) => (
   <Layout>
@@ -55,6 +55,6 @@ const Generic = (props) => (
       </section>
     </div>
   </Layout>
-)
+);
 
-export default Generic
+export default Generic;

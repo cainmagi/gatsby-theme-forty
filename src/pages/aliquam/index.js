@@ -1,11 +1,11 @@
-import * as React from 'react'
-import Helmet from 'react-helmet'
-import { Link, graphql } from 'gatsby'
+import * as React from 'react';
+import Helmet from 'react-helmet';
+import { Link, graphql } from 'gatsby';
 
-import BannerCategory from '../../components/BannerCategory'
-import Layout from '../../components/layout'
+import BannerCategory from '../../components/BannerCategory';
+import Layout from '../../components/layout';
 
-import pic08 from '../../assets/images/pic08.jpg'
+import pic08 from '../../assets/images/pic08.jpg';
 
 export const query = graphql`
   query {
@@ -28,7 +28,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
 function PageList(props) {
   return (
@@ -67,9 +67,9 @@ function PageList(props) {
             const description =
               node.frontmatter.description !== undefined
                 ? node.frontmatter.description
-                : ''
+                : '';
             const image_src =
-              node.frontmatter.heroImage.childImageSharp.fluid.src
+              node.frontmatter.heroImage.childImageSharp.fluid.src;
             return (
               <section key={node.id}>
                 <Link to={`/${node.slug}`} className="image">
@@ -91,12 +91,12 @@ function PageList(props) {
                   </div>
                 </div>
               </section>
-            )
+            );
           })}
         </section>
       </div>
     </Layout>
-  )
+  );
 }
 
-export default PageList
+export default PageList;

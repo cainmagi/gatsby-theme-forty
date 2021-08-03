@@ -1,13 +1,13 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
-import Layout from '../components/layout'
+import Layout from '../components/layout';
 
 function DefaultLayout(props) {
-  const frontmatter = props.data.frontmatter
+  const frontmatter = props.data.frontmatter;
   const description =
-    frontmatter.description !== null ? frontmatter.description : ''
+    frontmatter.description !== null ? frontmatter.description : '';
 
   return (
     <Layout>
@@ -30,7 +30,7 @@ function DefaultLayout(props) {
         </section>
       </div>
     </Layout>
-  )
+  );
 }
 
-export default DefaultLayout
+export default DefaultLayout;
