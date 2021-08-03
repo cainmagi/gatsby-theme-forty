@@ -1,5 +1,5 @@
 exports.createSchemaCustomization = ({ actions }) => {
-  const { createTypes } = actions
+  const { createTypes } = actions;
 
   createTypes(`
     type Mdx implements Node {
@@ -8,5 +8,5 @@ exports.createSchemaCustomization = ({ actions }) => {
     type MdxFrontmatter {
       heroImage: File @fileByRelativePath
     }
-  `)
-}
+  `);
+};
