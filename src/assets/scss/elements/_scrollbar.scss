@@ -20,26 +20,34 @@
 ::-webkit-selection {
   background-color: #CCE2FF;
   color: rgba(0, 0, 0, 0.87);
+
   /* Form */
-  textarea#{&}, input#{&} {
+  textarea#{&},
+  input#{&} {
     background-color: rgba(100, 100, 100, 0.4);
     color: rgba(0, 0, 0, 0.87);
   }
 }
+
 ::-moz-selection {
   background-color: #CCE2FF;
   color: rgba(0, 0, 0, 0.87);
+
   /* Form */
-  textarea#{&}, input#{&} {
+  textarea#{&},
+  input#{&} {
     background-color: rgba(100, 100, 100, 0.4);
     color: rgba(0, 0, 0, 0.87);
   }
 }
+
 ::selection {
   background-color: #CCE2FF;
   color: rgba(0, 0, 0, 0.87);
+
   /* Form */
-  textarea#{&}, input#{&} {
+  textarea#{&},
+  input#{&} {
     background-color: rgba(100, 100, 100, 0.4);
     color: rgba(0, 0, 0, 0.87);
   }
@@ -48,36 +56,48 @@
 
 /* Force Simple Scrollbars */
 body {
-  &::-webkit-scrollbar, ::-webkit-scrollbar {
+
+  &::-webkit-scrollbar,
+  ::-webkit-scrollbar {
     -webkit-appearance: none;
   }
+
   &::-webkit-scrollbar {
     width: 12px;
     height: 12px;
   }
+
   ::-webkit-scrollbar {
     width: 10px;
     height: 10px;
   }
-  &::-webkit-scrollbar-track, ::-webkit-scrollbar-track {
+
+  &::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-track {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0px;
   }
-  &::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
+
+  &::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-thumb {
     cursor: pointer;
     background: rgba(255, 255, 255, 0.25);
     -webkit-transition: color 0.2s ease;
     transition: color 0.2s ease;
+
     &:window-inactive {
       background: rgba(255, 255, 255, 0.15);
     }
+
     &:hover {
       background: rgba(255, 255, 255, 0.35);
     }
   }
+
   &::-webkit-scrollbar-thumb {
     border-radius: 6px;
   }
+
   ::-webkit-scrollbar-thumb {
     border-radius: 5px;
   }

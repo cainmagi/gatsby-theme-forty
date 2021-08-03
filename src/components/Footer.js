@@ -1,30 +1,30 @@
-import React from 'react';
+import React from 'react'
 
-import CircleIcon from '../utils/CircleIcon';
-import fabTwitterIcon from '@iconify-icons/fa-brands/twitter';
-import fabFacebookF from '@iconify-icons/fa-brands/facebook-f';
-import fabInstagramIcon from '@iconify-icons/fa-brands/instagram';
-import fabGithubIcon from '@iconify-icons/fa-brands/github';
-import fabLinkedinIn from '@iconify-icons/fa-brands/linkedin-in';
+import CircleIcon from '../utils/CircleIcon'
+import fabTwitterIcon from '@iconify-icons/fa-brands/twitter'
+import fabFacebookF from '@iconify-icons/fa-brands/facebook-f'
+import fabInstagramIcon from '@iconify-icons/fa-brands/instagram'
+import fabGithubIcon from '@iconify-icons/fa-brands/github'
+import fabLinkedinIn from '@iconify-icons/fa-brands/linkedin-in'
 
 const Footer = (props) => (
   <footer id="footer">
     <div className="inner">
       <ul className="icons">
         <li>
-          <CircleIcon href="#" icon={fabTwitterIcon} ariaLabel="Twitter"/>
+          <CircleIcon href="#" icon={fabTwitterIcon} ariaLabel="Twitter" />
         </li>
         <li>
-          <CircleIcon href="#" icon={fabFacebookF} ariaLabel="Facebook"/>
+          <CircleIcon href="#" icon={fabFacebookF} ariaLabel="Facebook" />
         </li>
         <li>
-          <CircleIcon href="#" icon={fabInstagramIcon} ariaLabel="Instagram"/>
+          <CircleIcon href="#" icon={fabInstagramIcon} ariaLabel="Instagram" />
         </li>
         <li>
-          <CircleIcon href="#" icon={fabGithubIcon} ariaLabel="GitHub"/>
+          <CircleIcon href="#" icon={fabGithubIcon} ariaLabel="GitHub" />
         </li>
         <li>
-          <CircleIcon href="#" icon={fabLinkedinIn} ariaLabel="LinkedIn"/>
+          <CircleIcon href="#" icon={fabLinkedinIn} ariaLabel="LinkedIn" />
         </li>
       </ul>
       <ul className="copyright">

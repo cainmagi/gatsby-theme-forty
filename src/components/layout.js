@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import clsx from 'clsx'
 
 import '../assets/scss/main.scss'
 import Header from './Header'
@@ -8,48 +9,104 @@ import Contact from './Contact'
 import Footer from './Footer'
 
 class Layout extends React.Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            isMenuVisible: false,
-            loading: 'is-loading'
-        }
-        this.handleToggleMenu = this.handleToggleMenu.bind(this)
+  constructor(props) {
+    super(props)
+    this.state = {
+      isMenuVisible: false,
+      loading: 'is-loading',
+      isNavAlt: true,
     }
+    this.handleToggleMenu = this.handleToggleMenu.bind(this)
+    this.handleScroll = this.handleScroll.bind(this)
+    this.banner = null
+  }
 
-    componentDidMount () {
-        this.timeoutId = setTimeout(() => {
-            this.setState({loading: ''});
-        }, 100);
+  handleScroll() {
+    if (this.banner) {
+      const bottom_pos = this.banner.getClientRects()[0]
+      if (bottom_pos.bottom > 0) {
+        this.setState({ isNavAlt: true })
+      } else {
+        this.setState({ isNavAlt: false })
+      }
     }
+  }
 
-    componentWillUnmount () {
-        if (this.timeoutId) {
-            clearTimeout(this.timeoutId);
-        }
+  componentDidMount() {
+    if (this.props.isAlt) {
+      this.banner = document.getElementById('banner')
+      window.addEventListener('scroll', this.handleScroll)
     }
+    this.timeoutId = setTimeout(() => {
+      this.setState({ loading: '' })
+    }, 100)
+  }
 
-    handleToggleMenu() {
-        this.setState({
-            isMenuVisible: !this.state.isMenuVisible
-        })
+  componentDidUpdate(prevProps) {
+    if (this.props.isAlt != prevProps.isAlt) {
+      if (this.props.isAlt) {
+        this.banner = document.getElementById('banner')
+        window.addEventListener('scroll', this.handleScroll)
+      } else {
+        window.removeEventListener('scroll', this.handleScroll)
+        this.banner = null
+      }
     }
+  }
 
-    render() {
-        const { children } = this.props
-
-        return (
-            <div className={`body ${this.state.loading} ${this.state.isMenuVisible ? 'is-menu-visible' : ''}`}>
-                <div id="wrapper">
-                    <Header onToggleMenu={this.handleToggleMenu} />
-                    {children}
-                    <Contact />
-                    <Footer />
-                </div>
-                <Menu onToggleMenu={this.handleToggleMenu} />
-            </div>
-        )
+  componentWillUnmount() {
+    if (this.props.isAlt) {
+      window.removeEventListener('scroll', this.handleScroll)
+      this.banner = null
     }
+    if (this.timeoutId) {
+      clearTimeout(this.timeoutId)
+    }
+  }
+
+  handleToggleMenu() {
+    this.setState({
+      isMenuVisible: !this.state.isMenuVisible,
+    })
+  }
+
+  render() {
+    const { children, isAlt } = this.props
+
+    return (
+      <div
+        className={clsx([
+          'body',
+          this.state.loading,
+          this.state.isMenuVisible ? 'is-menu-visible' : '',
+        ])}
+      >
+        <div id="wrapper">
+          <Header
+            onToggleMenu={this.handleToggleMenu}
+            isAlt={isAlt && this.state.isNavAlt}
+          />
+          {children}
+          <Contact />
+          <Footer />
+        </div>
+        <Menu onToggleMenu={this.handleToggleMenu} />
+      </div>
+    )
+  }
+}
+
+Layout.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]).isRequired,
+  isAlt: PropTypes.bool,
+}
+
+Layout.defaultProps = {
+  children: [],
+  isAlt: false,
 }
 
 export default Layout

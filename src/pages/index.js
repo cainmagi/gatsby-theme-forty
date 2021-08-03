@@ -13,7 +13,7 @@ import Layout from '../components/layout'
 class HomeIndex extends React.Component {
   render() {
     return (
-      <Layout>
+      <Layout isAlt={true}>
         <Helmet
           title="Gatsby Starter - Forty"
           meta={[
@@ -28,8 +28,8 @@ class HomeIndex extends React.Component {
           <section id="one" className="tiles">
             <article style={{ backgroundImage: `url(${pic01})` }}>
               <Link
-                aria-label="Link to Landing Page"
-                to="/landing"
+                aria-label="Link to Aliquam Page"
+                to="/aliquam"
                 className="link primary"
               >
                 <header className="major">

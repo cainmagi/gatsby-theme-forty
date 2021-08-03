@@ -32,50 +32,53 @@
   &:first-child {
     margin-left: 0em;
   }
+
   &:last-child {
     margin-right: 0em;
   }
 
   /* Inside Link */
-  & > a {
+  &>a {
     cursor: pointer;
     color: inherit;
     opacity: 0.5;
     -webkit-transition: 0.1s opacity ease;
     transition: 0.1s opacity ease;
+
     &:hover {
       opacity: 1;
     }
   }
 
   /* Image */
-  & > img {
+  &>img {
     width: auto !important;
     vertical-align: middle;
     height: 2.1666em !important;
   }
 
   /* Icon */
-  & > .icon {
+  &>.icon {
     width: auto;
     margin: 0em 0.75em 0em 0em;
   }
 
   /* Detail */
-  & > .detail {
+  &>.detail {
     display: inline-block;
     vertical-align: top;
     font-weight: bold;
     margin-left: 1em;
     opacity: 0.8;
+
     .icon {
       margin: 0em 0.25em 0em 0em;
     }
   }
 
   /* Removable label */
-  & > .close.icon,
-  & > .delete.icon {
+  &>.close.icon,
+  &>.delete.icon {
     cursor: pointer;
     margin-right: 0em;
     margin-left: 0.5em;
@@ -84,7 +87,8 @@
     -webkit-transition: background 0.1s ease;
     transition: background 0.1s ease;
   }
-  & > .delete.icon:hover {
+
+  &>.delete.icon:hover {
     opacity: 1;
   }
 
@@ -98,7 +102,7 @@
         Group
 --------------------*/
 
-.ui.labels > .label {
+.ui.labels>.label {
   margin: 0em 0.5em 0.5em 0em;
 }
 
@@ -106,32 +110,36 @@
         Coupling
 --------------------*/
 
-.ui.header > .ui.label {
+.ui.header>.ui.label {
   margin-top: -0.29165em;
 }
 
 /* Remove border radius on attached segment */
-.ui.attached.segment > .ui.top.left.attached.label,
-.ui.bottom.attached.segment > .ui.top.left.attached.label {
+.ui.attached.segment>.ui.top.left.attached.label,
+.ui.bottom.attached.segment>.ui.top.left.attached.label {
   border-top-left-radius: 0;
 }
-.ui.attached.segment > .ui.top.right.attached.label,
-.ui.bottom.attached.segment > .ui.top.right.attached.label {
+
+.ui.attached.segment>.ui.top.right.attached.label,
+.ui.bottom.attached.segment>.ui.top.right.attached.label {
   border-top-right-radius: 0;
 }
-.ui.top.attached.segment > .ui.bottom.left.attached.label {
+
+.ui.top.attached.segment>.ui.bottom.left.attached.label {
   border-bottom-left-radius: 0;
 }
-.ui.top.attached.segment > .ui.bottom.right.attached.label {
+
+.ui.top.attached.segment>.ui.bottom.right.attached.label {
   border-bottom-right-radius: 0;
 }
 
 /* Padding on next content after a label */
-.ui.top.attached.label:first-child + :not(.attached),
-.ui.top.attached.label + [class*="right floated"] + * {
+.ui.top.attached.label:first-child+ :not(.attached),
+.ui.top.attached.label+[class*="right floated"]+* {
   margin-top: 2rem !important;
 }
-.ui.bottom.attached.label:first-child ~ :last-child:not(.attached) {
+
+.ui.bottom.attached.label:first-child~ :last-child:not(.attached) {
   margin-top: 0em;
   margin-bottom: 2rem !important;
 }
@@ -152,7 +160,8 @@
   padding: 0.5833em 0.833em 0.5833em 0.5em;
   border-radius: 0.28571429rem;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
+
   img {
     display: inline-block;
     vertical-align: top;
@@ -186,7 +195,7 @@
   &:before {
     position: absolute;
     -webkit-transform: translateY(-50%) translateX(50%) rotate(-45deg);
-            transform: translateY(-50%) translateX(50%) rotate(-45deg);
+    transform: translateY(-50%) translateX(50%) rotate(-45deg);
     top: 50%;
     right: 100%;
     content: '';
@@ -208,7 +217,7 @@
     width: 0.5em;
     height: 0.5em;
     -webkit-box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
-            box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: 0 -1px 1px 0 rgba(0, 0, 0, 0.3);
     border-radius: 500rem;
   }
 }
@@ -235,6 +244,7 @@
   & {
     background-color: transparent !important;
   }
+
   &:after {
     position: absolute;
     content: "";
@@ -252,6 +262,7 @@
     -webkit-transition: border-color 0.1s ease;
     transition: border-color 0.1s ease;
   }
+
   .icon {
     cursor: default;
     position: relative;
@@ -268,6 +279,7 @@
   right: auto;
   left: 0em;
 }
+
 .ui.left.corner.label:after {
   border-top: 4em solid transparent;
   border-right: 4em solid transparent;
@@ -275,17 +287,19 @@
   border-left: 0em solid transparent;
   border-top-color: inherit;
 }
+
 .ui.left.corner.label .icon {
   left: -0.78571429em;
 }
 
 /* Segment */
 .ui.segment {
-  & > .ui.corner.label {
+  &>.ui.corner.label {
     top: -1px;
     right: -1px;
   }
-  & > .ui.left.corner.label {
+
+  &>.ui.left.corner.label {
     right: auto;
     left: -1px;
   }
@@ -326,6 +340,7 @@
   padding-left: calc(1rem + 1.2em);
   padding-right: 1.2em;
 }
+
 .ui[class*="right ribbon"].label {
   left: calc(100% + 1rem + 1.2em);
   padding-left: 1.2em;
@@ -336,9 +351,10 @@
 .ui[class*="right ribbon"].label {
   text-align: left;
   -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
   border-radius: 0.28571429rem 0em 0em 0.28571429rem;
 }
+
 .ui[class*="right ribbon"].label:after {
   left: auto;
   right: 0%;
@@ -362,28 +378,33 @@
   padding: 0.75em 1em;
   border-radius: 0.21428571rem 0.21428571rem 0em 0em;
 }
+
 .ui[class*="bottom attached"].label {
   top: auto;
   bottom: 0em;
   border-radius: 0em 0em 0.21428571rem 0.21428571rem;
 }
+
 .ui[class*="top left attached"].label {
   width: auto;
   margin-top: 0em !important;
   border-radius: 0.21428571rem 0em 0.28571429rem 0em;
 }
+
 .ui[class*="top right attached"].label {
   width: auto;
   left: auto;
   right: 0em;
   border-radius: 0em 0.21428571rem 0em 0.28571429rem;
 }
+
 .ui[class*="bottom left attached"].label {
   width: auto;
   top: auto;
   bottom: 0em;
   border-radius: 0em 0.28571429rem 0em 0.21428571rem;
 }
+
 .ui[class*="bottom right attached"].label {
   top: auto;
   bottom: 0em;
@@ -418,6 +439,7 @@ a.ui.label:hover {
   background-image: none;
   color: rgba(0, 0, 0, 0.8);
 }
+
 .ui.labels a.label:hover:before,
 a.ui.label:hover:before {
   color: rgba(0, 0, 0, 0.8);
@@ -432,6 +454,7 @@ a.ui.label:hover:before {
   border-color: #D0D0D0;
   background-image: none;
   color: rgba(0, 0, 0, 0.95);
+
   &:before {
     background-color: #D0D0D0;
     background-image: none;
@@ -450,6 +473,7 @@ a.ui.active.label:hover {
   background-image: none;
   color: rgba(0, 0, 0, 0.95);
 }
+
 .ui.labels a.active.label:ActiveHover:before,
 a.ui.active.label:ActiveHover:before {
   background-color: #C8C8C8;
@@ -520,6 +544,7 @@ a.ui.red.label:hover {
   color: #DB2828 !important;
   border-color: #DB2828 !important;
 }
+
 .ui.basic.red.labels a.label:hover,
 a.ui.basic.red.label:hover {
   background-color: #FFFFFF !important;
@@ -561,6 +586,7 @@ a.ui.orange.label:hover {
   color: #F2711C !important;
   border-color: #F2711C !important;
 }
+
 .ui.basic.orange.labels a.label:hover,
 a.ui.basic.orange.label:hover {
   background-color: #FFFFFF !important;
@@ -602,6 +628,7 @@ a.ui.yellow.label:hover {
   color: #FBBD08 !important;
   border-color: #FBBD08 !important;
 }
+
 .ui.basic.yellow.labels a.label:hover,
 a.ui.basic.yellow.label:hover {
   background-color: #FFFFFF !important;
@@ -643,6 +670,7 @@ a.ui.olive.label:hover {
   color: #B5CC18 !important;
   border-color: #B5CC18 !important;
 }
+
 .ui.basic.olive.labels a.label:hover,
 a.ui.basic.olive.label:hover {
   background-color: #FFFFFF !important;
@@ -684,6 +712,7 @@ a.ui.green.label:hover {
   color: #21BA45 !important;
   border-color: #21BA45 !important;
 }
+
 .ui.basic.green.labels a.label:hover,
 a.ui.basic.green.label:hover {
   background-color: #FFFFFF !important;
@@ -725,6 +754,7 @@ a.ui.teal.label:hover {
   color: #00B5AD !important;
   border-color: #00B5AD !important;
 }
+
 .ui.basic.teal.labels a.label:hover,
 a.ui.basic.teal.label:hover {
   background-color: #FFFFFF !important;
@@ -766,6 +796,7 @@ a.ui.blue.label:hover {
   color: #2185D0 !important;
   border-color: #2185D0 !important;
 }
+
 .ui.basic.blue.labels a.label:hover,
 a.ui.basic.blue.label:hover {
   background-color: #FFFFFF !important;
@@ -807,6 +838,7 @@ a.ui.violet.label:hover {
   color: #6435C9 !important;
   border-color: #6435C9 !important;
 }
+
 .ui.basic.violet.labels a.label:hover,
 a.ui.basic.violet.label:hover {
   background-color: #FFFFFF !important;
@@ -848,6 +880,7 @@ a.ui.purple.label:hover {
   color: #A333C8 !important;
   border-color: #A333C8 !important;
 }
+
 .ui.basic.purple.labels a.label:hover,
 a.ui.basic.purple.label:hover {
   background-color: #FFFFFF !important;
@@ -889,6 +922,7 @@ a.ui.pink.label:hover {
   color: #E03997 !important;
   border-color: #E03997 !important;
 }
+
 .ui.basic.pink.labels a.label:hover,
 a.ui.basic.pink.label:hover {
   background-color: #FFFFFF !important;
@@ -930,6 +964,7 @@ a.ui.brown.label:hover {
   color: #A5673F !important;
   border-color: #A5673F !important;
 }
+
 .ui.basic.brown.labels a.label:hover,
 a.ui.basic.brown.label:hover {
   background-color: #FFFFFF !important;
@@ -971,6 +1006,7 @@ a.ui.grey.label:hover {
   color: #767676 !important;
   border-color: #767676 !important;
 }
+
 .ui.basic.grey.labels a.label:hover,
 a.ui.basic.grey.label:hover {
   background-color: #FFFFFF !important;
@@ -1012,6 +1048,7 @@ a.ui.black.label:hover {
   color: #1B1C1D !important;
   border-color: #1B1C1D !important;
 }
+
 .ui.basic.black.labels a.label:hover,
 a.ui.basic.black.label:hover {
   background-color: #FFFFFF !important;
@@ -1028,7 +1065,7 @@ a.ui.basic.black.label:hover {
   border: 1px solid rgba(34, 36, 38, 0.15);
   color: rgba(0, 0, 0, 0.87);
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 /* Link */
@@ -1037,9 +1074,9 @@ a.ui.basic.label:hover {
   background: none #FFFFFF;
   color: #1e70bf;
   -webkit-box-shadow: 1px solid rgba(34, 36, 38, 0.15);
-          box-shadow: 1px solid rgba(34, 36, 38, 0.15);
+  box-shadow: 1px solid rgba(34, 36, 38, 0.15);
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 /* Pointing */
@@ -1052,10 +1089,10 @@ a.ui.basic.label:hover {
 --------------------*/
 
 .ui.label.fluid,
-.ui.fluid.labels > .label {
+.ui.fluid.labels>.label {
   width: 100%;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*-------------------
@@ -1092,6 +1129,7 @@ a.ui.basic.label:hover {
   text-align: center;
   border-radius: 500rem;
 }
+
 .ui.empty.circular.labels .label,
 .ui.empty.circular.label {
   min-width: 0em;
@@ -1109,9 +1147,11 @@ a.ui.basic.label:hover {
 .ui.pointing.label {
   position: relative;
 }
+
 .ui.attached.pointing.label {
   position: absolute;
 }
+
 .ui.pointing.label:before {
   background-color: inherit;
   background-image: inherit;
@@ -1125,7 +1165,7 @@ a.ui.basic.label:hover {
   position: absolute;
   content: '';
   -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   background-image: none;
   z-index: 2;
   width: 0.6666em;
@@ -1140,11 +1180,12 @@ a.ui.basic.label:hover {
 .ui[class*="pointing above"].label {
   margin-top: 1em;
 }
+
 .ui.pointing.label:before,
 .ui[class*="pointing above"].label:before {
   border-width: 1px 0px 0px 1px;
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
   top: 0%;
   left: 50%;
 }
@@ -1156,13 +1197,14 @@ a.ui.basic.label:hover {
   margin-top: 0em;
   margin-bottom: 1em;
 }
+
 .ui[class*="bottom pointing"].label:before,
 .ui[class*="pointing below"].label:before {
   border-width: 0px 1px 1px 0px;
   top: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
   top: 100%;
   left: 50%;
 }
@@ -1173,10 +1215,11 @@ a.ui.basic.label:hover {
   margin-top: 0em;
   margin-left: 0.6666em;
 }
+
 .ui[class*="left pointing"].label:before {
   border-width: 0px 0px 1px 1px;
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
-          transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
   bottom: auto;
   right: auto;
   top: 50%;
@@ -1189,10 +1232,11 @@ a.ui.basic.label:hover {
   margin-top: 0em;
   margin-right: 0.6666em;
 }
+
 .ui[class*="right pointing"].label:before {
   border-width: 1px 1px 0px 0px;
   -webkit-transform: translateX(50%) translateY(-50%) rotate(45deg);
-          transform: translateX(50%) translateY(-50%) rotate(45deg);
+  transform: translateX(50%) translateY(-50%) rotate(45deg);
   top: 50%;
   right: 0%;
   bottom: auto;
@@ -1251,30 +1295,37 @@ a.ui.basic.label:hover {
 .ui.mini.label {
   font-size: 0.64285714rem;
 }
+
 .ui.tiny.labels .label,
 .ui.tiny.label {
   font-size: 0.71428571rem;
 }
+
 .ui.small.labels .label,
 .ui.small.label {
   font-size: 0.78571429rem;
 }
+
 .ui.labels .label,
 .ui.label {
   font-size: 0.85714286rem;
 }
+
 .ui.large.labels .label,
 .ui.large.label {
   font-size: 1rem;
 }
+
 .ui.big.labels .label,
 .ui.big.label {
   font-size: 1.28571429rem;
 }
+
 .ui.huge.labels .label,
 .ui.huge.label {
   font-size: 1.42857143rem;
 }
+
 .ui.massive.labels .label,
 .ui.massive.label {
   font-size: 1.71428571rem;

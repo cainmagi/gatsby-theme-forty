@@ -1,0 +1,10 @@
+.active:not(:global(.alt)) {
+  visibility: visible;
+  transition: all 200ms ease-in;
+}
+
+.hidden:not(:global(.alt)) {
+  visibility: hidden;
+  transition: all 200ms ease-out;
+  transform: translate(0, -100%);
+}

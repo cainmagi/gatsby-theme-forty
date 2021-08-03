@@ -30,6 +30,12 @@ Additional features:
 * Replace the [font-awesome 4](https://fontawesome.com/v4.7/) fonts with [Iconify](https://iconify.design/), and support more icons.
 * Add a [`gatsby-plugin-smoothscroll`](https://www.gatsbyjs.com/plugins/gatsby-plugin-smoothscroll/) for supporting better smooth components.
 * Add `label` and `scrollbar` styles from [`semantic-ui`](https://semantic-ui.com/).
+* Refactor the blog pages by [`gatsby-plugin-mdx`](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx).
+* Refactor the code highlight by [`gatsby-remark-prismjs`](https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs).
+* Refactor the image by [`gatsby-plugin-image`](https://www.gatsbyjs.com/plugins/gatsby-plugin-image), [`gatsby-remark-images`](https://www.gatsbyjs.com/plugins/gatsby-remark-images), and [`gatsby-remark-images-medium-zoom`](https://www.gatsbyjs.com/plugins/gatsby-remark-images-medium-zoom).
+* Refactor the navigation bar, and add scrolling events for it.
+* Add the [`gatsby-remark-smartypants`](https://www.gatsbyjs.com/plugins/gatsby-remark-smartypants) plugin.
+* Prettify all codes.
 
 ## CSS Grid
 
