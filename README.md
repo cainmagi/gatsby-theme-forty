@@ -35,6 +35,7 @@ Additional features:
 * Refactor the image by [`gatsby-plugin-image`](https://www.gatsbyjs.com/plugins/gatsby-plugin-image), [`gatsby-remark-images`](https://www.gatsbyjs.com/plugins/gatsby-remark-images), and [`gatsby-remark-images-medium-zoom`](https://www.gatsbyjs.com/plugins/gatsby-remark-images-medium-zoom).
 * Refactor the navigation bar, and add scrolling events for it.
 * Add the [`gatsby-remark-smartypants`](https://www.gatsbyjs.com/plugins/gatsby-remark-smartypants) plugin.
+* Move the implementation of `gatsby-node.js` to `src/gatsby/node`
 * Prettify all codes.
 
 ## CSS Grid
