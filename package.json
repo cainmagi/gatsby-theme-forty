@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-theme-forty",
-  "description": "Gatsby Theme - Forty",
-  "version": "1.0.4",
-  "author": "Hunter Chang",
+  "name": "gatsby-theme-forty-plus",
+  "description": "Gatsby Theme - Forty Plus",
+  "version": "2.0.0",
+  "author": "Yuchen Jin and Hunter Chang",
   "dependencies": {
     "@iconify-icons/codicon": "^1.1.18",
     "@iconify-icons/fa-brands": "^1.1.0",
@@ -14,6 +14,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.1.1",
+    "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-image": "^1.10.1",
     "gatsby-plugin-manifest": "^3.10.0",
     "gatsby-plugin-mdx": "^2.10.1",
@@ -30,10 +31,14 @@
     "gatsby-remark-smartypants": "^4.7.0",
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-sharp": "^3.10.0",
+    "moment": "^2.29.1",
+    "moment-timezone": "^0.5.33",
     "prism-themes": "^1.8.0",
     "prismjs": "^1.24.1",
     "react-helmet": "^6.1.0",
-    "sass": "^1.37.0"
+    "react-moment": "^1.1.1",
+    "react-paginate": "^7.1.3",
+    "sass": "^1.37.5"
   },
   "keywords": [
     "gatsby",
@@ -48,18 +53,18 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "gatsby": "^3.10.2",
+    "gatsby": "^3.11.0",
     "prettier": "^2.3.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
-    "gatsby": "^3.10.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "gatsby": "^3.11.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/codebushi/gatsby-theme-forty"
+    "url": "https://github.com/cainmagi/gatsby-theme-forty"
   }
 }

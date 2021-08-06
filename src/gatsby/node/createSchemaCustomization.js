@@ -20,6 +20,7 @@ module.exports = ({ actions }) => {
     }
     type MdxFrontmatter {
       heroImage: File @fileByRelativePath
+      heroImageOnline: String
     }
   `);
 };

@@ -23,7 +23,9 @@ code[class*="language-"] {
   font-family: _font(family-fixed);
   font-size: 0.9em;
   border-radius: 0.3em;
-  margin: 1.0em 0.5em;
+  margin-left: _size(element-margin) / 4;
+  margin-right: _size(element-margin) / 4;
+  margin-bottom: _size(element-margin);
   padding: 0.5em 1.0em;
   padding-left: 14px;
   overflow: auto;

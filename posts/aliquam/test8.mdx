@@ -1,0 +1,29 @@
+---
+title: "Local js and css"
+date: "2021-08-05T20:13:10-0600"
+description: "An example of using local css and js."
+heroImage: ../../images/pic04.jpg
+category: 'aliquam'
+tags: ['tagged', 'js']
+custom_css:
+  - /css/semantic.label.min.css
+  - /css/semantic.input.min.css
+custom_js:
+  - /js/semantic.bundle.min.js
+---
+
+The following results are rendered by the external lib: `semantic-ui`, but the `semantic-ui` lib has been pulled to the local storage by
+
+```yaml
+custom_css:
+  - /css/semantic.label.min.css
+  - /css/semantic.input.min.css
+custom_js:
+  - /js/semantic.bundle.min.js
+```
+
+The following results are rendered by the pulled external lib: `semantic-ui`.
+
+<div class='ui input'>
+  <input id='example'/>
+</div>

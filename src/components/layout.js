@@ -15,16 +15,23 @@ class Layout extends React.Component {
       isMenuVisible: false,
       loading: 'is-loading',
       isNavAlt: true,
+      isHidden: false,
     };
     this.handleToggleMenu = this.handleToggleMenu.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
-    this.banner = null;
+    this.mainBody = null;
   }
 
   handleScroll() {
-    if (this.banner) {
-      const bottom_pos = this.banner.getClientRects()[0];
-      if (bottom_pos.bottom > 0) {
+    if (this.mainBody) {
+      const top_pos = this.mainBody.getBoundingClientRect().top;
+      const doc_pos = document.body.getBoundingClientRect().top;
+      if (doc_pos < -80) {
+        this.setState({ isHidden: true });
+      } else {
+        this.setState({ isHidden: false });
+      }
+      if (top_pos > 0) {
         this.setState({ isNavAlt: true });
       } else {
         this.setState({ isNavAlt: false });
@@ -34,7 +41,7 @@ class Layout extends React.Component {
 
   componentDidMount() {
     if (this.props.isAlt) {
-      this.banner = document.getElementById('banner');
+      this.mainBody = document.getElementById('main');
       window.addEventListener('scroll', this.handleScroll);
     }
     this.timeoutId = setTimeout(() => {
@@ -45,11 +52,11 @@ class Layout extends React.Component {
   componentDidUpdate(prevProps) {
     if (this.props.isAlt != prevProps.isAlt) {
       if (this.props.isAlt) {
-        this.banner = document.getElementById('banner');
+        this.mainBody = document.getElementById('main');
         window.addEventListener('scroll', this.handleScroll);
       } else {
         window.removeEventListener('scroll', this.handleScroll);
-        this.banner = null;
+        this.mainBody = null;
       }
     }
   }
@@ -57,7 +64,7 @@ class Layout extends React.Component {
   componentWillUnmount() {
     if (this.props.isAlt) {
       window.removeEventListener('scroll', this.handleScroll);
-      this.banner = null;
+      this.mainBody = null;
     }
     if (this.timeoutId) {
       clearTimeout(this.timeoutId);
@@ -71,27 +78,31 @@ class Layout extends React.Component {
   }
 
   render() {
-    const { children, isAlt } = this.props;
+    const { children, isAlt, extra } = this.props;
 
     return (
-      <div
-        className={clsx([
-          'body',
-          this.state.loading,
-          this.state.isMenuVisible ? 'is-menu-visible' : '',
-        ])}
-      >
-        <div id="wrapper">
-          <Header
-            onToggleMenu={this.handleToggleMenu}
-            isAlt={isAlt && this.state.isNavAlt}
-          />
-          {children}
-          <Contact />
-          <Footer />
+      <>
+        <div
+          className={clsx([
+            'body',
+            this.state.loading,
+            this.state.isMenuVisible ? 'is-menu-visible' : '',
+          ])}
+        >
+          <div id="wrapper">
+            <Header
+              onToggleMenu={this.handleToggleMenu}
+              isAlt={isAlt && this.state.isNavAlt}
+              isAuto={!isAlt || this.state.isHidden}
+            />
+            {children}
+            <Contact />
+            <Footer />
+          </div>
+          <Menu onToggleMenu={this.handleToggleMenu} />
         </div>
-        <Menu onToggleMenu={this.handleToggleMenu} />
-      </div>
+        {extra}
+      </>
     );
   }
 }
@@ -102,11 +113,13 @@ Layout.propTypes = {
     PropTypes.node,
   ]).isRequired,
   isAlt: PropTypes.bool,
+  extra: PropTypes.any,
 };
 
 Layout.defaultProps = {
   children: [],
   isAlt: false,
+  extra: [],
 };
 
 export default Layout;

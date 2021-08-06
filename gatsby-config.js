@@ -5,6 +5,7 @@ module.exports = {
     title: 'Gatsby Theme - Forty',
     author: 'Hunter Chang',
     description: 'A Gatsby.js Theme based on Forty by HTML5 UP',
+    postsPerPage: 6,
   },
   plugins: [
     `gatsby-plugin-smoothscroll`,
@@ -89,7 +90,7 @@ module.exports = {
               // stripping.
               // A suggested value for English speakers is the non-ascii
               // character '›'.
-              inlineCodeMarker: null,
+              inlineCodeMarker: '#!',
               // This lets you set up language aliases.  For example,
               // setting this to '{ sh: "bash" }' will let you use
               // the language "sh" which will highlight using the

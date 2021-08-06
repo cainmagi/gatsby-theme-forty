@@ -1,0 +1,31 @@
+---
+title: "External styles and js scripts"
+date: "2021-08-05T20:26:10-0600"
+description: "An example of using external css and js."
+heroImage: ../../images/pic04.jpg
+category: 'aliquam'
+tags: ['tagged', 'js']
+custom_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/input.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/label.min.css
+custom_js:
+  - https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
+---
+
+In this example, we show an example of using external JS:
+
+```yaml
+custom_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/input.min.css
+  - https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/components/label.min.css
+custom_js:
+  - https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js
+```
+
+The following results are rendered by the external lib: `semantic-ui`.
+
+<div class='ui input'>
+  <input id='example'/>
+</div>

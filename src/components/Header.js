@@ -57,7 +57,7 @@ function Header(props) {
       id="header"
       className={clsx([
         props.isAlt ? 'alt' : null,
-        state.isShown ? styles.active : styles.hidden,
+        props.isAuto ? (state.isShown ? styles.active : styles.hidden) : null,
       ])}
     >
       <Link to="/" className="logo">
@@ -74,11 +74,13 @@ function Header(props) {
 
 Header.propTypes = {
   isAlt: PropTypes.bool,
+  isAuto: PropTypes.bool,
   onToggleMenu: PropTypes.func,
 };
 
 Header.defaultProps = {
   isAlt: false,
+  isAuto: true,
   onToggleMenu: [],
 };
 

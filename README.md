@@ -1,17 +1,19 @@
-# gatsby-theme-forty
+# Gatsby-Theme Forty (Plus)
 
 Gatsby.js theme based on the Forty site template, designed by HTML5 UP.
 
 ## Preview
 
-https://gatsby-theme-forty.netlify.com
+Unavailable now.
+
+<!--- https://gatsby-theme-forty.netlify.com -->
 
 ## Installation
 
 Install this theme (assuming Gatsby is installed) by running from your CLI:
 
 ```shell
-gatsby new gatsby-theme-forty https://github.com/codebushi/gatsby-theme-forty
+gatsby new gatsby-theme-forty-plus https://github.com/cainmagi/gatsby-theme-forty
 cd gatsby-theme-forty
 gatsby develop
 ```
@@ -27,6 +29,16 @@ Compared to the original work,
 
 Additional features:
 
+### `2.0.0` features
+
+* Add automatic category, and tags resolution.
+* Support pagination for each category.
+* Support hero image frontmatter for each `mdx` file.
+* Support timestamp-based `date` / `lastmod` keywords for each `mdx` file.
+* Support `semantic-ui`-based tag styles and colors.
+* Support external css / javascript files for each `mdx` file.
+* Adjust the hero image style.
+* Refactor the header of each `mdx` file.
 * Replace the [font-awesome 4](https://fontawesome.com/v4.7/) fonts with [Iconify](https://iconify.design/), and support more icons.
 * Add a [`gatsby-plugin-smoothscroll`](https://www.gatsbyjs.com/plugins/gatsby-plugin-smoothscroll/) for supporting better smooth components.
 * Add `label` and `scrollbar` styles from [`semantic-ui`](https://semantic-ui.com/).
@@ -35,7 +47,8 @@ Additional features:
 * Refactor the image by [`gatsby-plugin-image`](https://www.gatsbyjs.com/plugins/gatsby-plugin-image), [`gatsby-remark-images`](https://www.gatsbyjs.com/plugins/gatsby-remark-images), and [`gatsby-remark-images-medium-zoom`](https://www.gatsbyjs.com/plugins/gatsby-remark-images-medium-zoom).
 * Refactor the navigation bar, and add scrolling events for it.
 * Add the [`gatsby-remark-smartypants`](https://www.gatsbyjs.com/plugins/gatsby-remark-smartypants) plugin.
-* Move the implementation of `gatsby-node.js` to `src/gatsby/node`
+* Move the implementation of `gatsby-node.js` to `src/gatsby/node`.
+* Adjust the styles of the banner, header and tag pages.
 * Prettify all codes.
 
 ## CSS Grid

@@ -89,11 +89,11 @@ class HomeIndex extends React.Component {
             <article style={{ backgroundImage: `url(${pic06})` }}>
               <Link
                 aria-label="Link to Landing Page"
-                to="/landing"
+                to="/tags"
                 className="link primary"
               >
                 <header className="major">
-                  <h3>Etiam</h3>
+                  <h3>Tags</h3>
                   <p>Feugiat amet tempus</p>
                 </header>
               </Link>

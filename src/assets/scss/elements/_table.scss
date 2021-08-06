@@ -1,0 +1,62 @@
+/* Styles of customized tables.
+ */
+
+table {
+  &.sub-title {
+    margin-top: -(_size(element-margin) * 0.5);
+    margin-bottom: 0;
+    width: 100%;
+    border-collapse: separate;
+
+    thead {
+      border-bottom: solid 2px rgba(212, 212, 255, 0.1);
+    }
+
+    tfoot {
+      border-top: solid 2px rgba(212, 212, 255, 0.1);
+    }
+
+    tbody {
+      tr {
+        border: 0;
+        border-left: 0;
+        border-right: 0;
+        border-left-width: 0;
+        border-top-width: 0;
+
+        &:nth-child(2n + 1) {
+          background-color: rgba(212, 212, 255, 0.035);
+        }
+
+        td:first-child {
+          border-left-width: 1px;
+        }
+      }
+
+      td {
+        padding: 0;
+        border-left-width: 0;
+        border-top-width: 0;
+      }
+
+      th {
+        color: #ffffff;
+        font-size: 0.9em;
+        font-weight: 600;
+        padding: 0;
+        width: 7.5em;
+        text-align: left;
+      }
+    }
+
+    .dream-tags{
+      .label {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .category {
+        text-transform: uppercase;
+      }
+    }
+  }
+}

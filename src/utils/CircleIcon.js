@@ -1,5 +1,5 @@
 import React from 'react';
-import clsx from 'clsx';
+import PropTypes from 'prop-types';
 import { Icon, InlineIcon } from '@iconify/react';
 
 import * as styles from './CircleIcon.module.scss';
@@ -30,5 +30,16 @@ function CircleIcon(props) {
     );
   }
 }
+
+CircleIcon.propTypes = {
+  ariaLabel: PropTypes.string,
+  href: PropTypes.string,
+  icon: PropTypes.any.isRequired,
+};
+
+CircleIcon.defaultProps = {
+  ariaLabel: undefined,
+  href: undefined,
+};
 
 export default CircleIcon;

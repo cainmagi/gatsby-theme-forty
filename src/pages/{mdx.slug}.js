@@ -1,6 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
+import { graphql } from 'gatsby';
 
 import DefaultLayout from '../templates/default-layout';
 
@@ -10,14 +9,19 @@ export const query = graphql`
       frontmatter {
         title
         description
-        date(formatString: "MMMM D, YYYY")
+        date
+        lastmod
+        tags
         heroImage {
           childImageSharp {
-            fluid {
+            fluid(maxWidth: 1280) {
               src
             }
           }
         }
+        heroImageOnline
+        custom_css
+        custom_js
       }
       body
     }
@@ -25,20 +29,25 @@ export const query = graphql`
 `;
 
 function PostImage(props) {
-  const image_src = props.childImageSharp.fluid.src;
-  if (!image_src) {
+  const imageSrc = props.imageSrc;
+  if (!imageSrc) {
     return null;
   }
-  return <img src={image_src} alt="" />;
+  return <img src={imageSrc} alt="" />;
 }
 
 function PostLayout(props) {
   const mdxData = props.data.mdx;
-  const heroImageData = mdxData.frontmatter.heroImage.childImageSharp;
+  const frontmatter = mdxData.frontmatter;
+  const heroImageSrc = frontmatter.heroImage
+    ? frontmatter.heroImage.childImageSharp.fluid.src
+    : frontmatter.heroImageOnline
+    ? frontmatter.heroImageOnline
+    : undefined;
   return (
     <DefaultLayout
-      data={props.data.mdx}
-      image={<PostImage childImageSharp={heroImageData} />}
+      data={mdxData}
+      image={<PostImage imageSrc={heroImageSrc} />}
     />
   );
 }

@@ -1,0 +1,147 @@
+/* Styles of Masonry.js */
+
+.title {
+  padding-left: 2em;
+  padding-top: 2em;
+  header {
+    &:global(.major) {
+      margin-bottom: 1em;
+    }
+    h2 {
+      text-transform: capitalize;
+    }
+  }
+}
+
+.grid {
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  overflow-y: hidden;
+
+  :global(.row) {
+    margin-left: -2em;
+    & > * {
+      float: left;
+      padding-left: 2em;
+    }
+    @media screen and (max-width: 1280px) {
+      & {
+        margin-left: -1.5em; 
+      }
+      & > * {
+        padding-left: 1.5em;
+      }
+    }
+    @media screen and (max-width: 736px) {
+      & {
+        margin-left: -1.25em; 
+      }
+      & > * {
+        padding-left: 1.25em;
+      }
+    }
+    @media screen and (max-width: 700px) {
+      & > * {
+        float: unset;
+      }
+      & .limitation {
+        min-width: unset;
+        width: 100%;
+      }
+    }
+  }
+
+  .limitation {
+    min-width: 20em;
+    width: 33%;
+  }
+
+  .masonry {
+    background-color: #2e3450;
+    margin-bottom: 2em;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 10px 10px 20px #0006;
+    -webkit-transition: background-color 0.2s ease;
+    -moz-transition: background-color 0.2s ease;
+    -o-transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:hover {
+      background-color: #353b5a;
+      .heroim {
+        opacity: 1.0;
+      }
+    }
+
+    ul {
+      margin-bottom: 1em;
+    }
+
+    h4 {
+      // font-size: 16px;
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed #bdd6d2;
+      font-size: 1.5rem;
+      text-align: center;
+      text-transform: capitalize;
+      letter-spacing: 0.1em;
+      &:hover, &:focus {
+        color: #9bf1ff;
+        border-bottom: 1px dashed #379392;
+      }
+      a {
+        &:hover, &:focus {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .heroim {
+      height: 10em;
+      opacity: 0.5;
+      background-position: center;
+      background-size: cover;
+      -moz-transition: opacity 0.2s ease;
+      -webkit-transition: opacity 0.2s ease;
+      -o-transition: opacity 0.2s ease;
+      transition: opacity 0.2s ease;
+    }
+
+    .text {
+      padding-top: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+      p#{&}, p {
+        color: #fff;
+      }
+    }
+
+    p {
+      margin-bottom: 0.8em;
+    }
+
+    .link {
+      padding: 0.5em;
+      background-color: #1b1f2e40;
+      font-weight: bold;
+      text-align: center;
+      -webkit-transition: background-color 0.2s ease;
+      -moz-transition: background-color 0.2s ease;
+      -o-transition: background-color 0.2s ease;
+      transition: background-color 0.2s ease;
+      &:hover, &:focus {
+        background-color: #1b1f2e60;
+      }
+    }
+
+    &.back {
+      background: #532121;
+      &:hover  {
+        background: #723a3a;
+      }
+    }
+  }
+}

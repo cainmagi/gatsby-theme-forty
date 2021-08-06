@@ -39,23 +39,23 @@
 }
 
 // Base.
-
 @import 'base/page';
 @import 'base/typography';
 
 // Elements.
-@import 'elements/label';
-@import 'elements/scrollbar';
 @import 'elements/code';
 @import 'elements/imgcrop';
+@import 'elements/label';
+@import 'elements/scrollbar';
+@import 'elements/table';
 
 // Component.
-
 @import 'components/section';
 @import 'components/form';
 @import 'components/box';
 @import 'components/image';
 @import 'components/list';
+@import 'components/paginator';
 @import 'components/table';
 @import 'components/button';
 @import 'components/tiles';
@@ -63,7 +63,6 @@
 @import 'components/spotlights';
 
 // Layout.
-
 @import 'layout/header';
 @import 'layout/banner';
 @import 'layout/main';

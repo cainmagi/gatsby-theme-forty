@@ -5,6 +5,9 @@ yarn-error.log
 package-lock.json
 yarn.lock
 
+# Test files
+/src/pages/test.js
+
 # Build directory
 /public
 .DS_Store
