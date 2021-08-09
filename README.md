@@ -29,6 +29,22 @@ Compared to the original work,
 
 Additional features:
 
+### `2.1.0` features
+
+* Add the following customized components:
+  * `Tabs`, `TabItem`: Used for adding multi-tab layout. This feature is supported by [`react-tabs`](https://reactcommunity.org/react-tabs/).
+  * `FloatCards`: Right-floating small cards, which types include wikipedia, EMS-math wiki and Britannica.
+  * Embedded `IFrames`: Including YouTube, Bilibili, PDF, and HTML page.
+  * `RefinedLink`: Used for refactoring the default `mdx` links. This component will enable the `mdx` links to utilize the efficient pre-fetching.
+  * `Box`: Box-styled components.
+* Refactor the automatic link of `mdx` files.
+* Add [`gatsby-remark-admonitions`](https://www.gatsbyjs.com/plugins/gatsby-remark-admonitions/) for supporting admonition cards.
+* Add [`gatsby-remark-responsive-iframe`](https://www.gatsbyjs.com/plugins/gatsby-remark-responsive-iframe/) for supporting automatic `<iframe>`s.
+* Add [`gatsby-plugin-svgr`](https://www.gatsbyjs.com/plugins/gatsby-plugin-svgr/) for supporting embedded SVG files.
+* Refactor the `<select>`, `<input>[checkbox]` elements.
+* Refactor some styles of the index page.
+* Add examples for new features.
+
 ### `2.0.0` features
 
 * Add automatic category, and tags resolution.
@@ -40,7 +56,7 @@ Additional features:
 * Adjust the hero image style.
 * Refactor the header of each `mdx` file.
 * Replace the [font-awesome 4](https://fontawesome.com/v4.7/) fonts with [Iconify](https://iconify.design/), and support more icons.
-* Add a [`gatsby-plugin-smoothscroll`](https://www.gatsbyjs.com/plugins/gatsby-plugin-smoothscroll/) for supporting better smooth components.
+* Add [`gatsby-plugin-smoothscroll`](https://www.gatsbyjs.com/plugins/gatsby-plugin-smoothscroll/) for supporting better smooth components.
 * Add `label` and `scrollbar` styles from [`semantic-ui`](https://semantic-ui.com/).
 * Refactor the blog pages by [`gatsby-plugin-mdx`](https://www.gatsbyjs.com/plugins/gatsby-plugin-mdx).
 * Refactor the code highlight by [`gatsby-remark-prismjs`](https://www.gatsbyjs.com/plugins/gatsby-remark-prismjs).

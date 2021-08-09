@@ -1,6 +1,13 @@
+
+
 pre[class*="language-"],
 code[class*="language-"] {
   font-size: inherit !important;
+}
+
+:not(pre) > code[class*="language-"] {
+	color: _palette(fg);
+	background: _palette(border);
 }
 
 .gatsby-highlight-code-line {
@@ -23,8 +30,8 @@ code[class*="language-"] {
   font-family: _font(family-fixed);
   font-size: 0.9em;
   border-radius: 0.3em;
-  margin-left: _size(element-margin) / 4;
-  margin-right: _size(element-margin) / 4;
+  margin-left: math.div(_size(element-margin), 4);
+  margin-right: math.div(_size(element-margin), 4);
   margin-bottom: _size(element-margin);
   padding: 0.5em 1.0em;
   padding-left: 14px;

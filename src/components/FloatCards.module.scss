@@ -1,0 +1,74 @@
+/** FloatCard Settings */
+@use "sass:map";
+@use "sass:math";
+@import '../assets/scss/libs/vars';
+
+div {
+  &.card {
+    clear: right;
+    width: 25%;
+    min-width: 250px;
+    padding: 0.5em;
+    margin-left: math.div(map.get($size, 'element-margin'), 4);
+    margin-bottom: math.div(map.get($size, 'element-margin'), 2);
+    text-align: left;
+    position: relative;
+    float: right;
+    overflow: hidden;
+    -webkit-transition: border-color 0.3s ease;
+    -moz-transition: border-color 0.3s ease;
+    -o-transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease;
+    border-style: solid;
+    border-width: 2px;
+    border-color: map.get($palette, 'fg-bold');
+    background-color: map.get($palette, 'bg');
+    box-shadow: 0 0 5px #223;
+
+    &:hover {
+      border-color: map.get($palette, 'highlight');
+    }
+
+    @media screen and (max-width: 600px) {
+      & {
+        float: none;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: map.get($size, 'element-margin');
+      }
+    }
+
+    .icon {
+      float: left;
+      width: 60px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .text {
+      margin-left: 70px;
+      font-style: normal;
+    }
+
+    p {
+      font-size: 0.9em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      strong, b {
+        color: inherit;
+      }
+    }
+
+    .image {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 0;
+    }
+  }
+}

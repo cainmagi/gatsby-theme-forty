@@ -35,6 +35,23 @@ header {
       }
     }
 
+    a.link.primary & {
+      &>h3 {
+        color: inherit;
+      }
+    }
+
+    a.link.primary:hover &,
+    a.link.primary:focus &,
+    a.link.primary:active & {
+      &>h3, &>p {
+        text-shadow: 2px 2px 4px _palette(bg);
+      }
+      &> :first-child:after {
+        background-color: _palette(highlight);
+      }
+    }
+
     >p {
       font-size: 0.7em;
       font-weight: _font(weight-bold);

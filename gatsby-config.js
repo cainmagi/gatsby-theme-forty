@@ -2,9 +2,9 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Theme - Forty',
-    author: 'Hunter Chang',
-    description: 'A Gatsby.js Theme based on Forty by HTML5 UP',
+    title: 'Gatsby Theme - Forty Plus',
+    author: 'Yuchen Jin and Hunter Chang',
+    description: 'A Gatsby.js Theme based on Forty by HTML5 UP.',
     postsPerPage: 6,
   },
   plugins: [
@@ -13,6 +13,13 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
+    {
+      resolve: 'gatsby-plugin-svgr',
+      options: {
+        prettier: true, // use prettier to format JS code output (default)
+        svgo: false, // use svgo to optimize SVGs (default)
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -50,7 +57,8 @@ module.exports = {
       options: {
         extensions: ['.mdx', '.md'],
         defaultLayouts: {
-          default: require.resolve('./src/templates/default-provider.js'),
+          default: require.resolve('./src/templates/default-provider'),
+          posts: require.resolve('./src/templates/default-provider'),
         },
         plugins: [
           {
@@ -63,6 +71,7 @@ module.exports = {
         ],
         gatsbyRemarkPlugins: [
           'gatsby-remark-smartypants',
+          `gatsby-remark-responsive-iframe`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -71,6 +80,13 @@ module.exports = {
               // base for generating different widths of each image.
               maxWidth: 590,
               linkImagesToOriginal: false, // Important!
+            },
+          },
+          {
+            resolve: `gatsby-remark-admonitions`,
+            options: {
+              tag: ':::',
+              icons: 'svg',
             },
           },
           {

@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-forty-plus",
   "description": "Gatsby Theme - Forty Plus",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "Yuchen Jin and Hunter Chang",
   "dependencies": {
     "@iconify-icons/codicon": "^1.1.18",
@@ -13,6 +13,7 @@
     "@iconify/react": "^1.1.4",
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
+    "@svgr/webpack": "^5.5.0",
     "clsx": "^1.1.1",
     "gatsby-awesome-pagination": "^0.3.8",
     "gatsby-plugin-image": "^1.10.1",
@@ -25,9 +26,12 @@
     "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-plugin-sitemap": "^4.6.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
+    "gatsby-plugin-svgr": "^3.0.0-beta.0",
+    "gatsby-remark-admonitions": "^0.1.1",
     "gatsby-remark-images": "^5.7.0",
     "gatsby-remark-images-medium-zoom": "^1.7.0",
     "gatsby-remark-prismjs": "^5.7.0",
+    "gatsby-remark-responsive-iframe": "^4.8.0",
     "gatsby-remark-smartypants": "^4.7.0",
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-sharp": "^3.10.0",
@@ -38,6 +42,7 @@
     "react-helmet": "^6.1.0",
     "react-moment": "^1.1.1",
     "react-paginate": "^7.1.3",
+    "react-tabs": "^3.2.2",
     "sass": "^1.37.5"
   },
   "keywords": [

@@ -6,6 +6,12 @@
 
 /* Form */
 
+@mixin fa-check-colored($color) {
+  background-image: svg-url('<svg aria-hidden="true" data-prefix="fas" data-icon="check" class="svg-inline--fa fa-check fa-w-16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path style="fill:#{$color};" d="M174 439L7 273a26 26 0 010-36l37-36c10-10 26-10 36 0l112 112L432 73c10-10 26-10 36 0l37 36c9 10 9 26 0 36L210 439a26 26 0 01-36 0z"/></svg>');
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 form {
   margin: 0 0 _size(element-margin) 0;
 
@@ -100,29 +106,6 @@ textarea {
   }
 }
 
-.select-wrapper {
-  display: block;
-  position: relative;
-
-  &:before {
-    color: _palette(border);
-    content: '\f078';
-    display: block;
-    height: _size(element-height);
-    line-height: _size(element-height);
-    pointer-events: none;
-    position: absolute;
-    right: 0;
-    text-align: center;
-    top: 0;
-    width: _size(element-height);
-  }
-
-  select::-ms-expand {
-    display: none;
-  }
-}
-
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -173,10 +156,12 @@ input[type="radio"] {
 
   &:checked+label {
     &:before {
-      background: _palette(fg-bold);
+      background-color: _palette(fg-bold);
       border-color: _palette(highlight);
-      content: '\f00c';
-      color: _palette(bg);
+      // content: '\f00c';
+      content: ' ';
+      background-size: 0.9em;
+      @include fa-check-colored(_palette(bg));
     }
   }
 
@@ -187,11 +172,13 @@ input[type="radio"] {
   }
 }
 
+/*
 input[type="checkbox"] {
   &+label {
     &:before {}
   }
 }
+*/
 
 input[type="radio"] {
   &+label {

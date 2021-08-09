@@ -29,7 +29,7 @@ class HomeIndex extends React.Component {
             <article style={{ backgroundImage: `url(${pic01})` }}>
               <Link
                 aria-label="Link to Aliquam Page"
-                to="/aliquam"
+                to="/aliquam/"
                 className="link primary"
               >
                 <header className="major">
@@ -40,13 +40,13 @@ class HomeIndex extends React.Component {
             </article>
             <article style={{ backgroundImage: `url(${pic02})` }}>
               <Link
-                aria-label="Link to Landing Page"
-                to="/landing"
+                aria-label="Link to Examples Page"
+                to="/examples/"
                 className="link primary"
               >
                 <header className="major">
-                  <h3>Tempus</h3>
-                  <p>feugiat amet tempus</p>
+                  <h3>Examples</h3>
+                  <p>Examples of some newly added features.</p>
                 </header>
               </Link>
             </article>

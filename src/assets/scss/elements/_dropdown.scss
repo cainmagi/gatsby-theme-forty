@@ -1,0 +1,70 @@
+/** Select Style */
+.select-wrapper {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  min-width: 5em;
+  -moz-transition: color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  &:after {
+    content: '';
+    position: absolute;
+    height: _size(element-height);
+    line-height: _size(element-height);
+    z-index: 2;
+    top: 45%;
+    right: 20px;
+    border: 0.5em dashed;
+    border-color: _palette(border) transparent;
+    pointer-events: none;
+    border-top-style: solid;
+    border-bottom: none;
+  }
+
+  select {
+    position: relative;
+    margin: 0;
+    -webkit-appearance: none;
+    color: _palette(fg);
+    &:hover, &:focus, &:active {
+      color: _palette(highlight);
+    }
+  
+    & > option {
+      background: _palette(bg);
+      cursor: pointer;
+    }
+
+    &::-ms-expand {
+      display: none;
+    }
+  }
+}
+
+
+/* Fix for IE 8 putting the arrows behind the select element. */ 
+.lt-ie9 {
+  .select-wrapper {
+    z-index: 1;
+
+    select {
+      z-index: -1;
+  
+      &:focus {
+        z-index: 3;
+      }
+    } 
+  }
+}
+
+/* Dirty fix for Firefox adding padding where it shouldn't. */
+@-moz-document url-prefix() {
+  .select-wrapper select {
+    padding-left: 6px;
+  }
+}

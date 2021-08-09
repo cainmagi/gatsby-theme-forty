@@ -12,6 +12,11 @@ const Menu = (props) => (
           </Link>
         </li>
         <li>
+          <Link onClick={props.onToggleMenu} to="/examples/">
+            Examples
+          </Link>
+        </li>
+        <li>
           <Link onClick={props.onToggleMenu} to="/landing">
             Landing
           </Link>

@@ -1,0 +1,376 @@
+---
+title: "Customized components"
+date: "2021-08-07T12:17:01-0600"
+lastmod: "2021-08-07T12:17:01-0600"
+description: "Examples of the customized components."
+heroImage: ../../../images/pic05.jpg
+category: 'examples'
+tags: ['examples']
+---
+
+# Examples of the built-in components
+
+## Blockquote
+
+<Tabs>
+<TabItem title='Results'>
+
+> This is an example of Blockquote
+>
+> You could write **Markdown** here.
+> For example:
+> ```cpp
+> int ns::ExampleClass::show_data(std::string &path) {
+>     auto is_net = path.find('http://') != std::string::npos;
+>     /* implementations... */
+>     return results;
+> }
+> ```
+
+</TabItem>
+<TabItem title='Codes'>
+
+```markdown
+> This is an example of Blockquote
+>
+> You could write **Markdown** here.
+> For example:
+> ```cpp
+> int ns::ExampleClass::show_data(std::string &path) {
+>     auto is_net = path.find('http://') != std::string::npos;
+>     /* implementations... */
+>     return results;
+> }
+> ```
+```
+
+</TabItem>
+</Tabs>
+
+However, the above implementation may be not very convenient, so we provide:
+
+<Tabs>
+<TabItem title='Results'>
+
+<blockquote>
+This is an example of Blockquote
+
+You could write **Markdown** here.
+For example:
+```cpp
+int ns::ExampleClass::show_data(std::string &path) {
+    auto is_net = path.find('http://') != std::string::npos;
+    /* implementations... */
+    return results;
+}
+```
+</blockquote>
+
+</TabItem>
+<TabItem title='Codes'>
+
+````markdown
+<blockquote>
+This is an example of Blockquote
+
+You could write **Markdown** here.
+For example:
+```cpp
+int ns::ExampleClass::show_data(std::string &path) {
+    auto is_net = path.find('http://') != std::string::npos;
+    /* implementations... */
+    return results;
+}
+```
+</blockquote>
+````
+
+</TabItem>
+</Tabs>
+
+## Box
+
+The `html#!<box>` element is similar to `html#!<blockquote>`, but Markdown syntax does not support it. Users could only create a new box by using the component:
+
+<Tabs>
+<TabItem title='Results'>
+
+<box>
+This is an example of Box
+
+You could write **Markdown** here.
+For example:
+```js
+const a = 'new-str'
+```
+</box>
+
+</TabItem>
+<TabItem title='Codes'>
+
+````markdown
+<box>
+This is an example of Box
+
+You could write **Markdown** here.
+For example:
+```js
+const a = 'new-str'
+```
+</box>
+````
+
+</TabItem>
+</Tabs>
+
+# Examples of extra components
+
+## Link
+
+<Tabs>
+<TabItem title='Results'>
+
+New <Link to='..'>example link</Link>.
+
+Eqivalent to [example link](..).
+
+The link provider has been refactored by Gatsby `jsx#!<Link/>` component. When users set a relative path, the link will benefit from the prefetching of the required page.
+
+Here is an example of the [external link](https://google.com/).
+
+</TabItem>
+<TabItem title='Codes'>
+
+```markdown
+New <Link to='..'>example link</Link>.
+
+Eqivalent to [example link](..).
+
+The link provider has been refactored by Gatsby `jsx#!<Link/>` component. When users set a relative path, the link will benefit from the prefetching of the required page.
+
+Here is an example of the [external link](https://google.com/).
+```
+
+</TabItem>
+</Tabs>
+
+## Tabs
+
+Tabs could be nested, but users need to pay attention to the indent.
+
+<Tabs>
+<TabItem title='Results'>
+
+<Tabs>
+<TabItem title='Tab1'>
+
+Use markdown here: *kk*
+
+</TabItem>
+
+<TabItem title='Tab2'>
+
+Another example with markdown:
+
+```shell{promptUser: alice}{promptHost: dev.localhost}
+cd "new folder"
+conda activate docs
+```
+
+</TabItem>
+</Tabs>
+
+</TabItem>
+<TabItem title='Codes'>
+
+````markdown
+<Tabs>
+<TabItem title='Tab1'>
+
+Use markdown here: *kk*
+
+</TabItem>
+
+<TabItem title='Tab2'>
+
+Another example with markdown:
+
+```shell{promptUser: alice}{promptHost: dev.localhost}
+cd "new folder"
+conda activate docs
+```
+
+</TabItem>
+</Tabs>
+````
+
+</TabItem>
+</Tabs>
+
+## Float cards
+
+A float card requires two arguments: `href` and `name`. If `href` is not given, will use `name` to deduce it.
+
+<Tabs>
+<TabItem title='Results'>
+
+<CardWikipedia href='Example' name='Example'/>
+
+<CardWikipedia name='Example'/>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla pellentesque elit. Quisque a nisl non nulla consectetur cursus ut a arcu. Sed lorem purus, convallis a varius eu, laoreet ut orci. Curabitur quis ornare libero. Aenean sed suscipit neque. Aenean tincidunt sem id est dapibus varius. Etiam justo tortor, tristique sit amet velit sit amet, accumsan tempor nulla. Duis malesuada, orci eget sodales lacinia, sem quam faucibus turpis, dapibus rutrum est ipsum vel massa. Pellentesque eget risus id diam luctus pharetra eget sit amet purus. Nullam suscipit turpis at fermentum lacinia. Quisque erat quam, sollicitudin vitae est quis, ornare mollis ante. Nulla facilisi.
+
+Certainly, there are two more float cards:
+
+<CardEMSMath href='Gaussian_channel' name='Gaussian channel'/>
+
+Fusce volutpat quam nibh, non consectetur massa consequat sit amet. Phasellus quis pulvinar mi, vitae maximus enim. Aliquam lobortis nibh turpis, eu imperdiet quam rhoncus non. Sed malesuada odio mi. Donec molestie suscipit nisl id ultricies. Integer metus massa, tempor id nunc et, rhoncus consequat lorem. Fusce elementum mollis tempor.
+
+<CardBritannica href='biography/Marco-Polo' name='Marco Polo'/>
+
+Donec suscipit commodo nunc aliquet fermentum. Praesent tempor erat et nulla sodales aliquam. Integer vitae justo consectetur, hendrerit tortor eu, tempor ex. In id quam suscipit, blandit lorem in, convallis risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed quis enim dictum, elementum diam at, mollis metus. Curabitur dictum tempus risus, et volutpat lorem aliquam quis. Fusce nisl metus, viverra in accumsan ac, condimentum eu odio. Ut diam diam, vehicula tempus fermentum in, ultrices sit amet mauris. Nullam ut finibus nibh. In nec ultrices nibh. Proin egestas sem dolor, et commodo lectus pulvinar in.
+
+</TabItem>
+<TabItem title='Codes'>
+
+```markdown
+<CardWikipedia href='Example' name='Example'/>
+
+<CardWikipedia name='Example'/>
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut fringilla pellentesque elit. Quisque a nisl non nulla consectetur cursus ut a arcu. Sed lorem purus, convallis a varius eu, laoreet ut orci. Curabitur quis ornare libero. Aenean sed suscipit neque. Aenean tincidunt sem id est dapibus varius. Etiam justo tortor, tristique sit amet velit sit amet, accumsan tempor nulla. Duis malesuada, orci eget sodales lacinia, sem quam faucibus turpis, dapibus rutrum est ipsum vel massa. Pellentesque eget risus id diam luctus pharetra eget sit amet purus. Nullam suscipit turpis at fermentum lacinia. Quisque erat quam, sollicitudin vitae est quis, ornare mollis ante. Nulla facilisi.
+
+Certainly, there are two more float cards:
+
+<CardEMSMath href='Gaussian_channel' name='Gaussian channel'/>
+
+Fusce volutpat quam nibh, non consectetur massa consequat sit amet. Phasellus quis pulvinar mi, vitae maximus enim. Aliquam lobortis nibh turpis, eu imperdiet quam rhoncus non. Sed malesuada odio mi. Donec molestie suscipit nisl id ultricies. Integer metus massa, tempor id nunc et, rhoncus consequat lorem. Fusce elementum mollis tempor.
+
+<CardBritannica href='biography/Marco-Polo' name='Marco Polo'/>
+
+Donec suscipit commodo nunc aliquet fermentum. Praesent tempor erat et nulla sodales aliquam. Integer vitae justo consectetur, hendrerit tortor eu, tempor ex. In id quam suscipit, blandit lorem in, convallis risus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed quis enim dictum, elementum diam at, mollis metus. Curabitur dictum tempus risus, et volutpat lorem aliquam quis. Fusce nisl metus, viverra in accumsan ac, condimentum eu odio. Ut diam diam, vehicula tempus fermentum in, ultrices sit amet mauris. Nullam ut finibus nibh. In nec ultrices nibh. Proin egestas sem dolor, et commodo lectus pulvinar in.
+```
+
+</TabItem>
+</Tabs>
+
+## Embedded `iframe`s
+
+### Plain `iframe`
+
+Any `iframe` created in the Markdown directly will be refacored by auto-responsive wrapper.
+
+<Tabs>
+<TabItem title='Results'>
+
+<iframe src="http://www.example.com/" width="192" height="108"></iframe>
+
+</TabItem>
+<TabItem title='Codes'>
+
+```html
+<iframe src="http://www.example.com/" width="192" height="108"></iframe>
+```
+
+</TabItem>
+</Tabs>
+
+### YouTube
+
+The `jsx#!<FrameYouTube/>` only accept one argument `href`.
+
+<Tabs>
+<TabItem title='Results'>
+
+<FrameYouTube href='WHWqj6gKS9g'/>
+
+</TabItem>
+<TabItem title='Codes'>
+
+```markdown
+<FrameYouTube href='WHWqj6gKS9g'/>
+```
+
+</TabItem>
+</Tabs>
+
+### Bilibili
+
+The `jsx#!<FrameBilibili/>` for Bilibili supports both `av` and `BV` IDs. The video ID type will be resolved automatically, for example:
+
+<Tabs>
+<TabItem title='Results'>
+
+<FrameBilibili href='av757320831'/>
+
+which is equivalent to
+
+<FrameBilibili href='BV1T64y1Q7i4'/>
+
+Also, for a video with multiple pages, the argument `page` is provided for selecting a specific page.
+
+<FrameBilibili href='BV1bW411U7sd' page='9'/>
+
+</TabItem>
+<TabItem title='Codes'>
+
+```markdown
+<FrameBilibili href='av757320831'/>
+
+which is equivalent to
+
+<FrameBilibili href='BV1T64y1Q7i4'/>
+
+Also, for a video with multiple pages, the argument `page` is provided for selecting a specific page.
+
+<FrameBilibili href='BV1bW411U7sd' page='9'/>
+```
+
+</TabItem>
+</Tabs>
+
+### PDF documents
+
+The `jsx#!<FramePDF/>` component could be used for showing both the local or external pdf files. For the local serving case, the file need to be placed in the correct place of the `/static` folder.
+
+<Tabs>
+<TabItem title='Results'>
+
+<FramePDF href='./sample.pdf'/>
+
+<FramePDF href='http://www.africau.edu/images/default/sample.pdf'/>
+
+</TabItem>
+<TabItem title='Codes'>
+
+```markdown
+<FramePDF href='./sample.pdf'/>
+
+<FramePDF href='http://www.africau.edu/images/default/sample.pdf'/>
+```
+
+</TabItem>
+</Tabs>
+
+### HTML documents
+
+Similar to the PDF documents, `jsx#!<FramePage/>` is used for serving a HTML file.
+
+<Tabs>
+<TabItem title='Results'>
+
+<FramePage href='./html-test-page.html'/>
+
+<FramePage href='http://web.simmons.edu/~grovesd/comm244/notes/week3/html-test-page.html'/>
+
+</TabItem>
+<TabItem title='Codes'>
+
+```markdown
+<FramePage href='./html-test-page.html'/>
+
+<FramePage href='http://web.simmons.edu/~grovesd/comm244/notes/week3/html-test-page.html'/>
+```
+
+</TabItem>
+</Tabs>
